@@ -6,36 +6,32 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.nfhackathon.botb.rpt.R;
+import com.nfhackathon.botb.rpt.operations.RPTOps;
+import com.nfhackathon.botb.rpt.utils.GenericActivity;
 import com.nfhackathon.botb.rpt.utils.LifecycleLoggingActivity;
 
+/**
+ * Created by pthakkar9 on 7/11/2015.
+ *
+ * This Activity prompts the user for age and target income.
+ * Extends LifecycleLoggingActivity so its
+ * lifecycle hook methods are logged automatically.
+ *
+ * This is the View Interface in MVP pattern.
+ */
 
-public class RPTActivity extends LifecycleLoggingActivity {
+public class RPTActivity extends GenericActivity<RPTOps> {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
+
+        // Always call super class for necessary
+        // initialization/implementation.
+        super.onCreate(savedInstanceState,
+                RPTOps.class);
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 }
