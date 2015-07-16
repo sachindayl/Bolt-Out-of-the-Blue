@@ -9,6 +9,7 @@
     <!-- String constants for layout -->
     <string name="ageLabel">Current Age:</string>
     <string name="goBtnText">Go!</string>
+    <string name="goBtnText2">Done!</string>
     <string name="traLabelText">Target Retirement Amount: </string>
     <string name="traAmountString">$100,000</string>
     
@@ -19,4 +20,5 @@
     <string name="home">Home</string>
     <string name="kids">Kids</string>
     <string name="relocation">Relocation</string>
+    <string name="title_activity_result">ResultActivity</string>
 </resources>

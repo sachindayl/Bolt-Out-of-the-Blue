@@ -24,6 +24,10 @@
             android:name=".activities.DecisionActivity"
             android:label="@string/title_activity_decision" >
         </activity>
+        <activity
+            android:name=".activities.ResultActivity"
+            android:label="@string/title_activity_result" >
+        </activity>
     </application>
 
 </manifest>
