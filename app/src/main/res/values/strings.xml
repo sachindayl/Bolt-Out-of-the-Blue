@@ -10,4 +10,7 @@
     <string name="goBtnText">Go!</string>
     <string name="traLabelText">Target Retirement Amount: </string>
     <string name="traAmountString">$100,000</string>
+    
+    <!-- Titles -->
+    <string name="title_activity_decision">DecisionActivity</string>
 </resources>
