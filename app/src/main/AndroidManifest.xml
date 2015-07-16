@@ -20,6 +20,10 @@
             android:name=".utils.LifecycleLoggingActivity"
             android:label="@string/title_activity_lifecycle_logging" >
         </activity>
+        <activity
+            android:name=".activities.DecisionActivity"
+            android:label="@string/title_activity_decision" >
+        </activity>
     </application>
 
 </manifest>
