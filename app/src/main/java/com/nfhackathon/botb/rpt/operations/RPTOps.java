@@ -56,6 +56,7 @@ public class RPTOps implements ConfigurableOps,
         if (firstTimeIn) {
 
             // TODO set up view
+
         } else {
             // TODO reclaim view
         }
