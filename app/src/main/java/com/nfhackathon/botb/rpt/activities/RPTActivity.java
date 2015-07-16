@@ -106,9 +106,10 @@ public class RPTActivity extends GenericActivity<RPTOps> {
     public int getAge() {
 
         //Done get retirement amount from Slider
-//        return Integer.parseInt(currentAgeEditText.getText().toString());
+        String ageString = currentAgeEditText.getText().toString();
+        return Integer.parseInt(ageString);
 
-        return 0;
+//        return 0;
 
     }
 

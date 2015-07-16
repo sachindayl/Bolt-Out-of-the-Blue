@@ -14,4 +14,8 @@
     
     <!-- Titles -->
     <string name="title_activity_decision">DecisionActivity</string>
+    <string name="travel">Travel</string>
+    <string name="marriage">Marriage</string>
+    <string name="home">Home</string>
+    <string name="kids">Kids</string>
 </resources>

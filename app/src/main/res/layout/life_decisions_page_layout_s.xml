@@ -14,29 +14,166 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="43dp"
             android:text="@string/future_life_decisions_title"
-            android:layout_centerHorizontal="true"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textSize="30sp"
             android:textStyle="bold" />
     </RelativeLayout>
 
-
     <LinearLayout
-        android:id="@+id/life_decisions"
-        android:layout_width="0dp"
-        android:layout_height="fill_parent"
-        android:orientation="horizontal"
+        android:id="@+id/decisionsLabels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/decisionSliders2"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/life_decisions_main"
-/>
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_toStartOf="@+id/decisionSliders"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kids"
+            android:textSize="20sp" />
+
+    </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/life_decisions_info"
-        android:layout_width="0dp"
-        android:layout_height="fill_parent"
-        android:orientation="horizontal"
-        android:layout_below="@+id/life_decisions_main" />
+        android:id="@+id/decisionsLabels2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/decisionSliders3"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/decisionsLabels"
+        android:layout_centerHorizontal="true"
+        android:layout_toStartOf="@id/decisionSliders"
+        android:orientation="horizontal">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/home"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/decisionsLabels3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/decisionSliders4"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/decisionsLabels2"
+        android:layout_toStartOf="@+id/decisionSliders"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/marriage"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/decisionsLabels4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/decisionSliders5"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/decisionsLabels3"
+        android:layout_toStartOf="@+id/decisionSliders"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/travel"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/decisionsLabels5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/decisionSliders5"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/decisionsLabels4"
+        android:layout_centerHorizontal="true"
+        android:layout_toStartOf="@+id/decisionSliders"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/relocation"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/decisionSliders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/life_decisions_main"
+        android:layout_marginTop="@dimen/activity_vertical_margin">
+
+        <SeekBar
+            android:layout_width="160dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/decisionSliders2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/decisionSliders">
+
+        <SeekBar
+            android:layout_width="160dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/decisionSliders3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/decisionSliders2">
+
+        <SeekBar
+            android:layout_width="160dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/decisionSliders4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/decisionSliders3">
+
+        <SeekBar
+            android:layout_width="160dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/decisionSliders5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/decisionSliders4">
+
+        <SeekBar
+            android:layout_width="160dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 
 </RelativeLayout>

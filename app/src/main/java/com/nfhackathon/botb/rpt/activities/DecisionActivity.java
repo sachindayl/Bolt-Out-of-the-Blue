@@ -12,7 +12,7 @@ public class DecisionActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_decision);
+        setContentView(R.layout.life_decisions_page_layout_s);
     }
 
 //    @Override
