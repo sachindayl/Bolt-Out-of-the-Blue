@@ -3,6 +3,7 @@ package com.nfhackathon.botb.rpt.activities;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -78,6 +79,7 @@ public class RPTActivity extends GenericActivity<RPTOps> {
         targetRetAmountSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 
             int progressValue;
+
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 progressValue = progress;
@@ -99,16 +101,22 @@ public class RPTActivity extends GenericActivity<RPTOps> {
     }
 
 
-     /**
+    /**
      * Helper method that gets age from view
      */
 
     public int getAge() {
 
         //Done get retirement amount from Slider
-        String ageString = currentAgeEditText.getText().toString();
-        return Integer.parseInt(ageString);
-
+        String ageString = "0";
+        int age = -1;
+        ageString = currentAgeEditText.getText().toString();
+        try {
+            age = Integer.parseInt(ageString);
+        } catch (NumberFormatException e) {
+            Log.d(TAG, "NumberFormatException");
+        }
+        return age;
 //        return 0;
 
     }
