@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Bolt-Out-of-the-Blue.iml" filepath="$PROJECT_DIR$/Bolt-Out-of-the-Blue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RPT.iml" filepath="$PROJECT_DIR$/RPT.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

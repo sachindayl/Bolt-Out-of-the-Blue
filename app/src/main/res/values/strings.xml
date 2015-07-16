@@ -5,5 +5,13 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_lifecycle_logging">LifecycleLoggingActivity</string>
     <string name="future_life_decisions_title">Future Life Decisions</string>
+
+    <!-- String constants for layout -->
+    <string name="ageLabel">Current Age:</string>
+    <string name="goBtnText">Go!</string>
+    <string name="traLabelText">Target Retirement Amount: </string>
+    <string name="traAmountString">$100,000</string>
+    
+    <!-- Titles -->
     <string name="title_activity_decision">DecisionActivity</string>
 </resources>

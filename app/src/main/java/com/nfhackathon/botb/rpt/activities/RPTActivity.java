@@ -20,11 +20,11 @@ import com.nfhackathon.botb.rpt.utils.LifecycleLoggingActivity;
 
 /**
  * Created by pthakkar9 on 7/11/2015.
- *
+ * <p/>
  * This Activity prompts the user for age and target income.
  * Extends LifecycleLoggingActivity so its
  * lifecycle hook methods are logged automatically.
- *
+ * <p/>
  * This is the View Interface in MVP pattern.
  */
 
@@ -33,6 +33,8 @@ public class RPTActivity extends GenericActivity<RPTOps> {
     private EditText currentAgeEditText;
 
     private SeekBar targetRetAmountSeekBar;
+
+    private TextView targetRetAmountTextView;
 
     private Button nextButton;
 
@@ -46,7 +48,7 @@ public class RPTActivity extends GenericActivity<RPTOps> {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.input_screen_layout);
 
         // Initialize the view fields in the activity instance.
         // TODO can be moved to RPTOps
@@ -63,49 +65,64 @@ public class RPTActivity extends GenericActivity<RPTOps> {
      * Helper method that initializes the views
      */
     public void initializeDisplayViewFields() {
-        // TODO Store the Views.
+        // Done Store the Views.
+
+        currentAgeEditText = (EditText) findViewById(R.id.currentAge);
+        targetRetAmountSeekBar = (SeekBar) findViewById(R.id.targetRetAmount);
+        targetRetAmountTextView = (TextView) findViewById(R.id.traNum);
+        nextButton = (Button) findViewById(R.id.goBtn);
 
         // Get Target amount and age
         currentAge = getAge();
-        targetRetAmount = getTargetRetAmount();
+
+        targetRetAmountSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+
+            int progressValue;
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                progressValue = progress;
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                targetRetAmountTextView.setText("Progress is " + progressValue);
+                targetRetAmount = progressValue;
+            }
+        });
 
         // Initialize Tiffany Class
         mTiffany = new Tiffany(currentAge, targetRetAmount);
     }
 
-    /**
-     * Helper method that gets retirement amount from view
-     */
 
-    public long getTargetRetAmount() {
-
-        //TODO get retirement amount from Slider
-
-        return 0;
-    }
-
-    /**
+     /**
      * Helper method that gets age from view
      */
 
     public int getAge() {
 
-        //TODO get retirement amount from Slider
+        //Done get retirement amount from Slider
+//        return Integer.parseInt(currentAgeEditText.getText().toString());
 
         return 0;
+
     }
 
     /**
      * Get called when the user presses the
      * "Go" button.
      */
-    private void goToDecisionActivity(View v){
+    public void goToDecisionActivity(View v) {
 
-        //TODO Explicit intent to go to the Decision Activity
+        //Done Explicit intent to go to the Decision Activity
 
         Intent decisionIntent = new Intent(this, DecisionActivity.class);
         // pass target amount? - No need as we Tiffany class now
-        startService(decisionIntent);
+        startActivity(decisionIntent);
 
     }
 
