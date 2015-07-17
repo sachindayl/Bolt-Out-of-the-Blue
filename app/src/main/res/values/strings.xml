@@ -16,6 +16,7 @@
     <!-- Titles -->
     <string name="title_activity_decision">DecisionActivity</string>
     <string name="title_activity_result">ResultActivity</string>
+    <string name="title_activity_results">ResultsActivity</string>
 
     <!-- Life Choices Strings -->
     <string name="kidsLabel">Having kids?</string>
@@ -29,5 +30,19 @@
 
     <string name="relocLabel">Relocating?</string>
     <string name="relocLabelAlt">Where?</string>
-    <string name="title_activity_results">ResultsActivity</string>
+
+
+    <!-- Detail Strings -->
+    <string name="factHeader">Fast Facts</string>
+    <string name="factBody">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
+
+    <string name="storyHeader">Why these numbers?</string>
+    <string name="storyBody">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+        anim id est laborum."</string>
 </resources>
