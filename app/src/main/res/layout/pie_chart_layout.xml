@@ -15,6 +15,7 @@
         android:layout_centerHorizontal="true"
         android:id="@+id/agentsButton"
         android:text="Find Nearby Agents"
+        android:onClick="goToGMaps"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 

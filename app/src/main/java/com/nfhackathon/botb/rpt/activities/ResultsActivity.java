@@ -1,10 +1,13 @@
 package com.nfhackathon.botb.rpt.activities;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
@@ -24,9 +27,8 @@ import java.util.ArrayList;
 public class ResultsActivity extends Activity {
     private RelativeLayout pieLayout;
     private PieChart mChart;
-    private float[] yData= {5, 10, 15, 30, 40};
-    private String[]  xData={"Stock", "Mutual-Fund", "Something","something1","something2"};
-
+    private float[] yData = {5, 10, 15, 30, 40};
+    private String[] xData = {"Stock", "Mutual-Fund", "Something", "something1", "something2"};
 
 
     @Override
@@ -34,7 +36,7 @@ public class ResultsActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pie_chart_layout);
         pieLayout = (RelativeLayout) findViewById(R.id.pieLayout);
-        mChart= new PieChart(this);
+        mChart = new PieChart(this);
         pieLayout.addView(mChart);
         pieLayout.setBackgroundColor(Color.LTGRAY);
         mChart.setUsePercentValues(true);
@@ -71,43 +73,52 @@ public class ResultsActivity extends Activity {
         l.setYEntrySpace(5);
     }
 
-    private void addData(){
+    /* Get called when the user presses the
+"Find Agents" button. Goes to google maps or other map app. Zoom level is 10 can be changed */
+    public void goToGMaps(View v) {
+        Uri gmmIntentUri = Uri.parse("geo:0,0?z=10&q=Nationwide Agents");
+        Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+        mapIntent.setPackage("com.google.android.apps.maps");
+        startActivity(mapIntent);
+    }
+
+    private void addData() {
 
         ArrayList<Entry> yVals1 = new ArrayList<Entry>();
 
-        for(int i=0; i < yData.length;i++)
-            yVals1.add(new Entry(yData[i],i));
+        for (int i = 0; i < yData.length; i++)
+            yVals1.add(new Entry(yData[i], i));
 
-        ArrayList<String> xVals=new ArrayList<String>();
+        ArrayList<String> xVals = new ArrayList<String>();
 
-        for(int i=0; i < xData.length;i++)
+        for (int i = 0; i < xData.length; i++)
             xVals.add(xData[i]);
 
-        PieDataSet dataSet=new PieDataSet(yVals1,"Investment");
+        PieDataSet dataSet = new PieDataSet(yVals1, "Investment");
         dataSet.setSliceSpace(3);
         dataSet.setSelectionShift(5);
 
-        ArrayList<Integer> colors= new ArrayList<Integer>();
+        ArrayList<Integer> colors = new ArrayList<Integer>();
 
-        for(int c: ColorTemplate.VORDIPLOM_COLORS)
+        for (int c : ColorTemplate.VORDIPLOM_COLORS)
             colors.add(c);
 
-        for(int c: ColorTemplate.JOYFUL_COLORS)
+        for (int c : ColorTemplate.JOYFUL_COLORS)
             colors.add(c);
 
-        for(int c: ColorTemplate.COLORFUL_COLORS)
+        for (int c : ColorTemplate.COLORFUL_COLORS)
             colors.add(c);
 
-        for(int c: ColorTemplate.LIBERTY_COLORS)
+        for (int c : ColorTemplate.LIBERTY_COLORS)
             colors.add(c);
 
-        for(int c: ColorTemplate.PASTEL_COLORS)
+        for (int c : ColorTemplate.PASTEL_COLORS)
             colors.add(c);
 
         colors.add(ColorTemplate.getHoloBlue());
         dataSet.setColors(colors);
 
-        PieData data = new PieData(xVals,dataSet);
+        PieData data = new PieData(xVals, dataSet);
         data.setValueFormatter(new PercentFormatter());
         data.setValueTextSize(11f);
         data.setValueTextColor(Color.GRAY);
@@ -120,11 +131,6 @@ public class ResultsActivity extends Activity {
 
 
     }
-
-
-
-
-
 
 
     @Override
