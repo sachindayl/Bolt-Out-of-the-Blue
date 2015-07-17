@@ -1,15 +1,11 @@
 package com.nfhackathon.botb.rpt.activities;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -17,7 +13,6 @@ import com.nfhackathon.botb.rpt.R;
 import com.nfhackathon.botb.rpt.operations.RPTOps;
 import com.nfhackathon.botb.rpt.operations.Tiffany;
 import com.nfhackathon.botb.rpt.utils.GenericActivity;
-import com.nfhackathon.botb.rpt.utils.LifecycleLoggingActivity;
 
 /**
  * Created by pthakkar9 on 7/11/2015.
@@ -43,7 +38,7 @@ public class RPTActivity extends GenericActivity<RPTOps> {
 
     private int currentAge;
 
-    // TODO can be moved to RPTOps
+    // Done can be moved to RPTOps
     public Tiffany mTiffany;
 
     @Override
@@ -52,7 +47,7 @@ public class RPTActivity extends GenericActivity<RPTOps> {
         setContentView(R.layout.input_screen_layout);
 
         // Initialize the view fields in the activity instance.
-        // TODO can be moved to RPTOps
+        // Done can be moved to RPTOps
         initializeDisplayViewFields();
 
         // Always call super class for necessary
@@ -91,7 +86,7 @@ public class RPTActivity extends GenericActivity<RPTOps> {
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-                targetRetAmountTextView.setText("Progress is " + progressValue);
+                targetRetAmountTextView.setText("$" + (progressValue*100000));
                 targetRetAmount = progressValue;
             }
         });

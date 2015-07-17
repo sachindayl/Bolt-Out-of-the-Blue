@@ -12,6 +12,7 @@
         android:max="10"
         android:progress="1"
         android:layout_centerVertical="true"
+        android:thumb="@drawable/currency_black_dollar"
         android:layout_alignParentStart="true" />
 
     <Button
