@@ -34,9 +34,14 @@
 
     <!-- Detail Strings -->
     <string name="factHeader">Fast Facts</string>
-    <string name="factBody">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
+    <string-array name="factBodyAry">
+        <item>Shares of ownership in corporations headquartered outside of the U.S.</item>
+        <item>Shares of ownership in small and mid-sized corporations.</item>
+        <item>Shares of ownership in large-sized corporations.</item>
+        <item>IOUs issued by governments or corporations.</item>
+        <item>A sum of money is deposited for a specified period of time. </item>
+        <item>Cash</item>
+    </string-array>
 
     <string name="storyHeader">Why these numbers?</string>
     <string name="storyBody">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

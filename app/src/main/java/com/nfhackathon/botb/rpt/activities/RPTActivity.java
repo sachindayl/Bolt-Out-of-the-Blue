@@ -68,6 +68,8 @@ public class RPTActivity extends GenericActivity<RPTOps> {
         targetRetAmountTextView = (TextView) findViewById(R.id.traNum);
         nextButton = (Button) findViewById(R.id.goBtn);
 
+        targetRetAmountSeekBar.requestFocus();
+
         // Get Target amount and age
         currentAge = getAge();
 
