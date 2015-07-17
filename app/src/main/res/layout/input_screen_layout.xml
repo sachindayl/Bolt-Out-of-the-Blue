@@ -2,8 +2,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_blue_light"
+    android:background="@android:color/white"
     android:orientation="vertical">
+
+
 
     <SeekBar
         android:id="@+id/targetRetAmount"
@@ -47,10 +49,12 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/currentAgeLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@id/targetRetAmount"
         android:layout_marginBottom="16dp">
+
 
         <TextView
             android:id="@+id/currentAgeLabel"
@@ -58,6 +62,7 @@
             android:layout_height="wrap_content"
             android:text="@string/ageLabel"
             android:textSize="24sp" />
+
 
         <EditText
             android:id="@+id/currentAge"
@@ -69,4 +74,11 @@
             android:inputType="number" />
     </LinearLayout>
 
+    <ImageView
+        android:id="@+id/nw_logo"
+        android:background="@drawable/nwlogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/currentAgeLayout"
+        />
 </RelativeLayout>
