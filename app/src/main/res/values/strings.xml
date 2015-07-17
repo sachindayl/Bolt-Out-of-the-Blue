@@ -44,10 +44,18 @@
     </string-array>
 
     <string name="storyHeader">Why these numbers?</string>
-    <string name="storyBody">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-        anim id est laborum."</string>
+    <string-array name="storyBodyAry">
+        <item>You might invest 35% on bonds because the life decisions you are making require you to
+            remain somewhat conservative with your investments, and bonds have minimum risk. Bonds
+            will give you a set amount of money back, and, with having kids, this can be a way of
+            securing funds for their college education.
+        </item>
+        <item>
+            You might invest 10% on international Stocks because the life decisions you are making
+            require you to remain somewhat conservative with your investments because these stocks
+            can be a risky investment, as the market can change it what seems like random ways.
+            With a spouse, two kids, and a house you want something more stable to rely on for
+            income, but the potential high payback is worth this small amount.
+        </item>
+    </string-array>
 </resources>
