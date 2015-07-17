@@ -21,17 +21,18 @@ import com.github.mikephil.charting.utils.ColorTemplate;
 import com.github.mikephil.charting.utils.Highlight;
 import com.github.mikephil.charting.utils.PercentFormatter;
 import com.nfhackathon.botb.rpt.R;
+import com.nfhackathon.botb.rpt.operations.InvestmentModels;
+import com.nfhackathon.botb.rpt.operations.Tiffany;
 
+import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 
 public class ResultsActivity extends Activity {
     private RelativeLayout pieLayout;
     private PieChart mChart;
-    private float[] yData = {5, 10, 15, 30, 40};
-    private String[] xData = {"Stock", "Mutual-Fund", "Something", "something1", "something2"};
+    private float[] yData = new InvestmentModels().getConsAlloc();
+    private String[] xData = new Tiffany(3, 100).assetClasses;
 
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pie_chart_layout);
@@ -40,7 +41,7 @@ public class ResultsActivity extends Activity {
         pieLayout.addView(mChart);
         pieLayout.setBackgroundColor(Color.LTGRAY);
         mChart.setUsePercentValues(true);
-        mChart.setDescription("Result based on life decisions");
+        mChart.setDescription("");
         mChart.setDrawHoleEnabled(true);
         mChart.setHoleColorTransparent(true);
         mChart.setHoleRadius(7);
@@ -82,6 +83,13 @@ public class ResultsActivity extends Activity {
         startActivity(mapIntent);
     }
 
+    public void callCust(View v){
+
+        String uriNum = "1-877-669-6877";
+        Uri dialNum = Uri.parse(uriNum);
+        Intent callIntent = new Intent(Intent.ACTION_DIAL,dialNum);
+        startActivity(callIntent);
+    }
     private void addData() {
 
         ArrayList<Entry> yVals1 = new ArrayList<Entry>();
@@ -114,6 +122,7 @@ public class ResultsActivity extends Activity {
 
         for (int c : ColorTemplate.PASTEL_COLORS)
             colors.add(c);
+
 
         colors.add(ColorTemplate.getHoloBlue());
         dataSet.setColors(colors);

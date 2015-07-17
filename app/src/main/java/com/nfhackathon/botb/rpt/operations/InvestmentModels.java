@@ -7,6 +7,10 @@ import java.util.HashMap;
  * This class is a Plain Old Java Object (POJO) to represent Client Data.
  */
 public class InvestmentModels {
+
+    public InvestmentModels() {
+    }
+
     public String[] invModels = {"Conservative",
             "Moderately Conservative",
             "Moderate",
@@ -15,24 +19,24 @@ public class InvestmentModels {
 
     private HashMap<String, Integer> hashMap = new HashMap<String, Integer>();
 
-    public int[] getConsAlloc(){
-        return new int[]{5, 5, 10, 40, 25, 15};
+    public float[] getConsAlloc(){
+        return new float[] {5, 5, 10, 40, 25, 15};
     }
 
-    public int[] getModConsAlloc(){
-        return new int[]{10, 10, 20, 35, 15, 10};
+    public float[] getModConsAlloc(){
+        return new float[]{10, 10, 20, 35, 15, 10};
     }
 
-    public int[] getModAlloc(){
-        return new int[]{15, 15, 30, 25, 10, 5};
+    public float[] getModAlloc(){
+        return new float[]{15, 15, 30, 25, 10, 5};
     }
 
-    public int[] getModAggAlloc(){
-        return new int[]{25, 20, 35, 15, 5, 0};
+    public float[] getModAggAlloc(){
+        return new float[]{25, 20, 35, 15, 5, 0};
     }
 
-    public int[] getAggAlloc(){
-        return new int[]{30, 25, 40, 5, 0, 0};
+    public float[] getAggAlloc(){
+        return new float[]{30, 25, 40, 5, 0, 0};
     }
 
 
