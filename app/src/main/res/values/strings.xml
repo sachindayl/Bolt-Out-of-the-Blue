@@ -29,4 +29,5 @@
 
     <string name="relocLabel">Relocating?</string>
     <string name="relocLabelAlt">Where?</string>
+    <string name="title_activity_results">ResultsActivity</string>
 </resources>

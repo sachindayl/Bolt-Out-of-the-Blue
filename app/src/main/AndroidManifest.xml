@@ -25,8 +25,8 @@
             android:label="@string/title_activity_decision" >
         </activity>
         <activity
-            android:name=".activities.ResultActivity"
-            android:label="@string/title_activity_result" >
+            android:name=".activities.ResultsActivity"
+            android:label="@string/title_activity_results" >
         </activity>
     </application>
 

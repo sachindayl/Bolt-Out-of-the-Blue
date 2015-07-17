@@ -3,8 +3,6 @@ package com.nfhackathon.botb.rpt.activities;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 
 import com.nfhackathon.botb.rpt.R;
@@ -47,7 +45,7 @@ public class DecisionActivity extends Activity {
 
         //Done Explicit intent to go to the Decision Activity
 
-        Intent decisionIntent = new Intent(this, DecisionActivity.class);
+        Intent decisionIntent = new Intent(this, ResultsActivity.class);
         // pass target amount? - No need as we Tiffany class now
         startActivity(decisionIntent);
 
