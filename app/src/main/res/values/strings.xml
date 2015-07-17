@@ -12,13 +12,21 @@
     <string name="goBtnText2">Done!</string>
     <string name="traLabelText">Target Retirement Amount: </string>
     <string name="traAmountString">$100,000</string>
-    
+
     <!-- Titles -->
     <string name="title_activity_decision">DecisionActivity</string>
-    <string name="travel">Travel</string>
-    <string name="marriage">Marriage</string>
-    <string name="home">Home</string>
-    <string name="kids">Kids</string>
-    <string name="relocation">Relocation</string>
     <string name="title_activity_result">ResultActivity</string>
+
+    <!-- Life Choices Strings -->
+    <string name="kidsLabel">Having kids?</string>
+    <string name="kidsLabelAlt">When?</string>
+
+    <string name="houseLabel">Buying a house?</string>
+    <string name="houseLabelAlt">When?</string>
+
+    <string name="marriageLabel">Getting married?</string>
+    <string name="marriageLabelAlt">When?</string>
+
+    <string name="relocLabel">Relocating?</string>
+    <string name="relocLabelAlt">Where?</string>
 </resources>

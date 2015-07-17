@@ -22,100 +22,140 @@
             android:textStyle="bold" />
     </RelativeLayout>
 
-    <LinearLayout
-        android:id="@+id/decisionsLabels"
+    <RelativeLayout
+        android:id="@+id/kidsLabelLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/decisionSliders2"
+        android:layout_above="@+id/houseOptionsLayout"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/life_decisions_main"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:layout_toStartOf="@+id/decisionSliders"
+        android:layout_toStartOf="@+id/kidsOptionsLayout"
         android:orientation="horizontal">
 
         <TextView
+            android:id="@+id/kidsLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/kids"
-            android:textSize="20sp" />
+            android:text="@string/kidsLabel"
+            android:textSize="@dimen/life_choice_text_size" />
 
-    </LinearLayout>
+        <TextView
+            android:id="@+id/kidsLabelAlt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kidsLabelAlt"
+            android:textSize="@dimen/life_choice_text_size"
+            android:visibility="invisible" />
 
-    <LinearLayout
-        android:id="@+id/decisionsLabels2"
+        <ImageView
+            android:id="@+id/kidsImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/kidsLabel"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/houseLabelLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/decisionSliders3"
+        android:layout_above="@+id/marriageOptionsLayout"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/decisionsLabels"
-        android:layout_centerHorizontal="true"
-        android:layout_toStartOf="@id/decisionSliders"
+        android:layout_below="@+id/kidsLabelLayout"
+        android:layout_toStartOf="@id/houseOptionsLayout"
         android:orientation="horizontal">
 
         <TextView
+            android:id="@+id/houseLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/home"
-            android:textSize="20sp" />
-    </LinearLayout>
+            android:text="@string/houseLabel"
+            android:textSize="@dimen/life_choice_text_size" />
 
-    <LinearLayout
-        android:id="@+id/decisionsLabels3"
+        <TextView
+            android:id="@+id/houseLabelAlt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/houseLabelAlt"
+            android:textSize="@dimen/life_choice_text_size"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/houseImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/marriageLabelLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/decisionSliders4"
+        android:layout_above="@+id/relocOptionsLayout"
         android:layout_alignParentStart="true"
-        android:layout_below="@id/decisionsLabels2"
-        android:layout_toStartOf="@+id/decisionSliders"
+        android:layout_below="@id/houseLabelLayout"
+        android:layout_toStartOf="@+id/marriageOptionsLayout"
         android:orientation="horizontal">
 
         <TextView
+            android:id="@+id/marriageLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:text="@string/marriage"
-            android:textSize="20sp" />
-    </LinearLayout>
+            android:text="@string/marriageLabel"
+            android:textSize="@dimen/life_choice_text_size" />
 
-    <LinearLayout
-        android:id="@+id/decisionsLabels4"
+        <TextView
+            android:id="@+id/marriageLabelAlt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/marriageLabelAlt"
+            android:textSize="@dimen/life_choice_text_size"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/marriageImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/marriageLabel"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relocLabelLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/decisionSliders5"
         android:layout_alignParentStart="true"
-        android:layout_below="@id/decisionsLabels3"
-        android:layout_toStartOf="@+id/decisionSliders"
+        android:layout_below="@id/marriageLabelLayout"
+        android:layout_toStartOf="@+id/kidsOptionsLayout"
         android:orientation="horizontal">
 
         <TextView
+            android:id="@+id/relocLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:text="@string/travel"
-            android:textSize="20sp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/decisionsLabels5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/decisionSliders5"
-        android:layout_alignParentStart="true"
-        android:layout_below="@id/decisionsLabels4"
-        android:layout_centerHorizontal="true"
-        android:layout_toStartOf="@+id/decisionSliders"
-        android:orientation="horizontal">
+            android:text="@string/relocLabel"
+            android:textSize="@dimen/life_choice_text_size" />
 
         <TextView
+            android:id="@+id/relocLabelAlt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/relocation"
-            android:textSize="20sp" />
-    </LinearLayout>
+            android:text="@string/relocLabelAlt"
+            android:textSize="@dimen/life_choice_text_size"
+            android:visibility="invisible" />
 
-    <LinearLayout
-        android:id="@+id/decisionSliders"
+        <ImageView
+            android:id="@+id/relocImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/relocLabel"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/kidsOptionsLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
@@ -124,67 +164,93 @@
         android:layout_marginTop="@dimen/activity_vertical_margin">
 
         <SeekBar
+            android:id="@+id/kidsSeekBar"
             android:layout_width="160dp"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
+            android:layout_height="wrap_content"
+            android:visibility="invisible" />
 
-    <LinearLayout
-        android:id="@+id/decisionSliders2"
+        <ToggleButton
+            android:id="@+id/kidsToggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOff="No"
+            android:textOn="Yes" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/houseOptionsLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_below="@id/decisionSliders">
+        android:layout_below="@id/kidsOptionsLayout">
 
         <SeekBar
+            android:id="@+id/houseSeekBar"
             android:layout_width="160dp"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
+            android:layout_height="wrap_content"
+            android:visibility="invisible" />
 
-    <LinearLayout
-        android:id="@+id/decisionSliders3"
+        <ToggleButton
+            android:id="@+id/houseToggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOff="No"
+            android:textOn="Yes" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/marriageOptionsLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_below="@id/decisionSliders2">
+        android:layout_below="@id/houseOptionsLayout">
 
         <SeekBar
+            android:id="@+id/marriageSeekBar"
             android:layout_width="160dp"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
+            android:layout_height="wrap_content"
+            android:visibility="invisible" />
 
-    <LinearLayout
-        android:id="@+id/decisionSliders4"
+        <ToggleButton
+            android:id="@+id/marriageToggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOff="No"
+            android:textOn="Yes" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relocOptionsLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_below="@id/decisionSliders3">
+        android:layout_below="@id/marriageOptionsLayout">
 
         <SeekBar
+            android:id="@+id/relocSeekBar"
             android:layout_width="160dp"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
+            android:layout_height="wrap_content"
+            android:visibility="invisible" />
 
-    <LinearLayout
-        android:id="@+id/decisionSliders5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_below="@id/decisionSliders4">
-
-        <SeekBar
-            android:layout_width="160dp"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
+        <ToggleButton
+            android:id="@+id/relocToggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOff="No"
+            android:textOn="Yes" />
+    </RelativeLayout>
 
     <Button
+        android:id="@+id/goBtn2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/goBtnText2"
-        android:id="@+id/goBtn2"
-        android:onClick="goToResultActivity"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="290dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:onClick="goToResultActivity"
+        android:text="@string/goBtnText2" />
 
 
 </RelativeLayout>
